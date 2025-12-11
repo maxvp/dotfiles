@@ -51,3 +51,13 @@ eval "$(starship init zsh)"
 # --- 7. ABBREVIATIONS ---
 abbr -S -q g="git"
 abbr -S -q lg="lazygit"
+alias nrd="npm run dev"
+alias git-recent="git branch --sort=-committerdate"
+alias gaa="git add --all"
+unalias gp
+alias gp="git push"
+alias gcp="git checkout production"
+abbr -S -q gaacm="git add --all && git commit -m "%""
+abbr -S -q gc="git commit"
+abbr -S -q gcm="git commit -m "%""
+abbr -S -q gco="git checkout"
