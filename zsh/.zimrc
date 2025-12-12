@@ -32,6 +32,9 @@ zmodule git-info
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 #zmodule asciiship
 
+### User extensions
+zmodule olets/zsh-abbr
+
 ### User themes
 zmodule prompt-pwd
 zmodule gitster
