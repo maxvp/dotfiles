@@ -7,6 +7,7 @@ REPO_URL="git@github.com:maxvp/.dotfiles.git"
 FILES_TO_LINK=(
     "zsh/.zshrc"
     "zsh/.zimrc"
+    "zsh/.zprofile"
 )
 
 echo "🚀 Starting Universal .dotfiles Bootstrap..."
@@ -62,7 +63,7 @@ find_package_manager() {
 install_zsh() {
     if ! command -v zsh > /dev/null 2>&1; then
         echo "⚙️ Zsh not found. Installing via $PKG_MANAGER..."
-        
+
         # Specific fix for Homebrew on Intel Mac (not strictly necessary but good practice)
         if [[ "$OS" == "Darwin" && "$ARCH" == "x86_64" ]]; then
              # On Intel Macs, the default zsh is /bin/zsh, but Homebrew zsh is preferred
@@ -97,7 +98,7 @@ fi
 link_file() {
     local src="$DOTFILES_DIR/$1"
     local dest="$HOME/$(basename "$1")"
-    
+
     if [ ! -f "$src" ]; then
         echo "   [SKIP] Source file not found in repo: $src"
         return
@@ -112,7 +113,7 @@ link_file() {
             mv "$dest" "$dest.backup"
         fi
     fi
-    
+
     echo "   [LINK] Creating symlink $dest -> $src"
     ln -s "$src" "$dest"
 }
