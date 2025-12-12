@@ -1,0 +1,26 @@
+# --- 1. COMPLETION SYSTEM (Must be first) ---
+autoload -Uz compinit
+compinit
+
+# Completion options
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # Case insensitive
+
+# --- 2. CONFIG MODULES ---
+source "${ZDOTDIR}/exports.zsh"
+source "${ZDOTDIR}/aliases.zsh"
+source "${ZDOTDIR}/prompt.zsh"
+
+# --- 3. MANUAL PLUGIN LOADING ---
+PLUGIN_DIR="$HOME/.local/share/zsh/plugins"
+
+# Syntax Highlighting
+source "$PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Autosuggestions
+source "$PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+# --- 4. ZSH OPTIONS ---
+setopt HIST_IGNORE_ALL_DUPS
+setopt SHARE_HISTORY
+bindkey -e
