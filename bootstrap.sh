@@ -2,14 +2,14 @@
 set -e # Exit immediately if a command exits with a non-zero status.
 
 # --- Configuration ---
-DOTFILES_DIR="$HOME/dotfiles"
-REPO_URL="git@github.com:YOUR_USERNAME/dotfiles.git" # <<< CRITICAL: REPLACE THIS URL
+DOTFILES_DIR="$HOME/.dotfiles"
+REPO_URL="git@github.com:maxvp/.dotfiles.git"
 FILES_TO_LINK=(
     "zsh/.zshrc"
     "zsh/.zimrc"
 )
 
-echo "🚀 Starting Universal Dotfiles Bootstrap..."
+echo "🚀 Starting Universal .dotfiles Bootstrap..."
 echo "---"
 
 # --- 1. Platform and Package Manager Detection ---
@@ -85,7 +85,7 @@ install_zsh
 echo "---"
 # Clone the repository
 if [ ! -d "$DOTFILES_DIR" ]; then
-    echo "📦 Cloning dotfiles from $REPO_URL..."
+    echo "📦 Cloning .dotfiles from $REPO_URL..."
     git clone "$REPO_URL" "$DOTFILES_DIR"
 else
     echo "✅ Dotfiles repository already present at $DOTFILES_DIR."
