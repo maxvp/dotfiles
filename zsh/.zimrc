@@ -37,7 +37,7 @@ zmodule olets/zsh-abbr
 
 ### User themes
 zmodule prompt-pwd
-zmodule gitster
+zmodule sorin
 
 #
 # Completion
