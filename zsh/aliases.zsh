@@ -2,6 +2,8 @@
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nrd="npm run dev"
+
+### git
 alias git-recent="git branch --sort=-committerdate"
 alias gaa="git add --all"
 # only needed if using oh-my-zsh git shortcuts
@@ -9,11 +11,6 @@ alias gaa="git add --all"
 alias gp="git push"
 alias gcp="git checkout production"
 
-### zsh-abbr
-ABBR_SET_EXPANSION_CURSOR=1
+### ls
+alias lsa="ls -a"
 
-# abbrs
-abbr -a gc "git commit"
-abbr -a gco "git checkout"
-abbr -a gcm "git commit -m \"%\""
-abbr -a gac "git add * && git commit -m \"%\""

@@ -8,6 +8,7 @@ FILES_TO_LINK=(
     "zsh/.zshrc"
     "zsh/.zimrc"
     "zsh/.zprofile"
+    "zsh/abbrs.zsh"
 )
 
 echo "🚀 Starting Universal .dotfiles Bootstrap..."

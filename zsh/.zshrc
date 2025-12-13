@@ -106,6 +106,7 @@ source ${ZIM_HOME}/init.zsh
 
 ### aliases and abbrs
 source "${HOME}/.dotfiles/zsh/aliases.zsh"
+ABBR_SET_EXPANSION_CURSOR=1
 
 # ------------------------------
 # Post-init module configuration

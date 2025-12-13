@@ -33,6 +33,8 @@ zmodule git-info
 #zmodule asciiship
 
 ### User extensions
+# zsh abbreviations
+export ABBR_USER_ABBREVIATIONS_FILE="$HOME/.dotfiles/zsh/abbrs.zsh"
 zmodule olets/zsh-abbr
 
 ### User themes
