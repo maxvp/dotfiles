@@ -14,3 +14,9 @@ alias gcp="git checkout production"
 ### ls
 alias lsa="ls -a"
 
+### KEEP AT BOTTOM OF LIST
+### allow syntax highlighting for abbrs
+alias gc='true'
+alias gco='true'
+alias gcm='true'
+alias gac='true'
