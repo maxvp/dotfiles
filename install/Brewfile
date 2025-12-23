@@ -1,5 +1,5 @@
 # Brewfile
-tap "homebrew/bundle"
+tap "homebrew/brew"
 
 # cli
 brew "gh"
@@ -14,7 +14,7 @@ cask "alt-tab"
 cask "bruno"
 cask "grandperspective"
 cask "helium-browser"
-cask "jordanbair-ice"
+cask "jordanbaird-ice"
 cask "linearmouse"
 cask "localsend"
 cask "raycast"
