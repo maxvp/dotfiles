@@ -108,6 +108,14 @@ source ${ZIM_HOME}/init.zsh
 source "${HOME}/.dotfiles/zsh/aliases.zsh"
 ABBR_SET_EXPANSION_CURSOR=1
 
+
+### PATH
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/mphillips/.codeium/windsurf/bin:$PATH"
+
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
