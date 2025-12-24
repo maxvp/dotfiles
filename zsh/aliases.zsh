@@ -1,25 +1,29 @@
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+### system
+alias zmain="bash $HOME/.dotfiles/scripts/maintenance.sh && exec zsh" # runs shell maintenance script
+alias reload="exec zsh"
+alias about="fastfetch"
+alias neofetch="fastfetch"
+
+### npm
 alias nrd="npm run dev"
 alias nrb="npm run build"
 
 ### git
 alias git-recent="git branch --sort=-committerdate"
 alias gaa="git add --all"
-# only needed if using oh-my-zsh git shortcuts
-#unalias gp
 alias gp="git push"
 alias gcp="git checkout production"
+alias gco="git checkout"
+alias gc="git commit"
+alias gcm="git commit -m"
 
 ### ls
 alias lsa="ls -a"
+alias lsla="ls -la"
 
 ### KEEP AT BOTTOM OF LIST
 ### allow syntax highlighting for abbrs
-alias gc='true'
-alias gco='true'
-alias gcm='true'
-alias gac='true'
-# --- AUTO-GENERATED ABBR ALIASES START ---
-# --- AUTO-GENERATED ABBR ALIASES END ---
+#alias gc='true'
+#alias gco='true'
+#alias gcm='true'
+#alias gac='true'
