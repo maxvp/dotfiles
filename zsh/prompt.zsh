@@ -12,7 +12,7 @@ prompt_git() {
 # 2. Logic to show the last command's exit code
 # If a command fails, show a red X; otherwise, stay silent.
 prompt_status() {
-  echo "%(?..%F{red}✘ %f)"
+  echo "%(?..%F{red}✕ %f)"
 }
 
 # 3. Define the PROMPT
@@ -25,5 +25,4 @@ PROMPT='
 $(prompt_status)λ '
 
 # 4. Define the RPROMPT (Right side)
-# %T: Current time (24h format)
 RPROMPT='%F{242}%t%f'
