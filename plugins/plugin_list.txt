@@ -1,0 +1,6 @@
+# Syntax & UI
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+
+# Themes
+# s1ck94/gitster
