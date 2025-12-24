@@ -1,5 +1,4 @@
 # Brewfile
-tap "homebrew/brew"
 
 # cli
 brew "gh"
