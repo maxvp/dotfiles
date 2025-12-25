@@ -9,6 +9,7 @@ brew "git"
 brew "stow"
 brew "eza"
 brew "bat"
+brew "mackup"
 
 # casks
 cask "alt-tab"
