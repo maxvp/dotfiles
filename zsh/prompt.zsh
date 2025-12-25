@@ -28,8 +28,8 @@ prompt_git_counts() {
     
     # Ahead/Behind count
     if [[ -n "$ahead_behind" ]]; then
-        local ahead=$(echo $ahead_behind | awk '{print $1}')
-        local behind=$(echo $ahead_behind | awk '{print $2}')
+        local ahead=$(echo "$ahead_behind" | awk '{print $1}')
+        local behind=$(echo "$ahead_behind" | awk '{print $2}')
         [[ "$ahead" -gt 0 ]] && status_str+=" %F{cyan}↑$ahead%f"
         [[ "$behind" -gt 0 ]] && status_str+=" %F{yellow}↓$behind%f"
     fi
@@ -44,10 +44,9 @@ precmd() {
 }
 
 # 4. Left Prompt (PROMPT)
-# Top line: Path + "on" + Branch + Counts
-# Bottom line: Status-aware Lambda
+# Removed %B (bold start) and %b (bold end)
 PROMPT='
-%B%F{blue}%~%f%b ${vcs_info_msg_0_}${GIT_STATUS_COUNTS}
+%F{blue}%~%f ${vcs_info_msg_0_}${GIT_STATUS_COUNTS}
 %(?.%f.%F{red})λ%f '
 
 # 5. Right Prompt (RPROMPT)
