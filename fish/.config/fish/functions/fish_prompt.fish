@@ -13,7 +13,7 @@ function fish_prompt
     echo -n " "
 
     # 3. Git Info (Magenta, Gray "on")
-    if fish_is_git_repository
+    if git rev-parse --is-inside-work-tree >/dev/null 2>&1
         set_color 929292
         echo -n "on "
         set_color magenta

@@ -2,7 +2,9 @@
 # abbreviations
 
 # Clean up existing abbrs to prevent duplicates on reload
-abbr --erase --all
+for a in (abbr -l)
+    abbr -e $a
+end
 
 # --- Git ---
 abbr -a ga   "git add"
