@@ -24,6 +24,16 @@ if command -v fish >/dev/null 2>&1; then
     fish -c "fish_update_completions" > /dev/null 2>&1
 fi
 
+# Update fisher plugin manager + plugins
+if command -v fish >/dev/null 2>&1; then
+    echo "🐟 Syncing Fish plugins with Fisher..."
+    # Install Fisher if missing
+    fish -c "if not functions -q fisher; curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher; end"
+    
+    # Update plugins based on your fish_plugins file
+    fish -c "fisher update"
+fi
+
 # AUTO-COMMIT
 if [[ -n $(git -C "$DOTFILES_DIR" status --porcelain) ]]; then
     echo "🚀 Changes detected. Pushing to GitHub..."
