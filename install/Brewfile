@@ -9,7 +9,7 @@ brew "git"
 brew "stow" # needed for using .dotfiles
 brew "eza" # improved ls
 brew "bat" # improved cat
-# brew "mackup" # back up Mac app settings. glitchy on newer versions
+brew "mackup" # back up Mac app settings. glitchy on newer versions
 brew "tlrc" # tldr on commands
 
 ### casks
