@@ -30,3 +30,19 @@ abbr -a ls "eza"
 abbr -a lsa "eza -a"
 abbr -a ll "eza -lh --group-directories-first"
 abbr -a la "eza -lah --group-directories-first"
+
+# --- zsh shortcuts ---
+# Last command
+abbr -a !! --position anywhere --function last_history_item
+
+# Last argument of last command
+abbr -a '!$' --position anywhere --function last_history_arg
+
+# Helper functions for the abbreviations
+function last_history_item
+    echo $history[1]
+end
+
+function last_history_arg
+    echo $argv_history[1] # Note: older fish might need: echo (commandline -poc)[-1]
+end
