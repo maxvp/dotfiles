@@ -1,8 +1,8 @@
 # --- PROMPT ---
-source "$HOME/.dotfiles/zsh/prompt.zsh"
+source "$ZDOTDIR/prompt.zsh"
 
 # --- OPTIONS ---
-source "$HOME/.dotfiles/zsh/options.zsh"
+source "$ZDOTDIR/options.zsh"
 
 # --- PLUGINS ---
 if [[ -d "$HOME/.dotfiles/plugins" ]]; then
@@ -17,7 +17,7 @@ fi
 
 # --- ALIASES ---
 # We source a manual aliases file instead of a generated one
-[[ -f "$HOME/.dotfiles/zsh/aliases.zsh" ]] && source "$HOME/.dotfiles/zsh/aliases.zsh"
+[[ -f "$ZDOTDIR/aliases.zsh" ]] && source "$HOME/.dotfiles/zsh/aliases.zsh"
 
 # --- SYNTAX HIGHLIGHTING (place last) ---
 [[ -f "$HOME/.dotfiles/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
