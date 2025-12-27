@@ -1,25 +1,19 @@
-# ~/.dotfiles/fish/.config/fish/functions/fish_prompt.fish
-
+# a called to `_pure_prompt_new_line` is triggered by an event
 function fish_prompt
-    set -l last_status $status
+    set --local exit_code $status # save previous exit code
 
-    # Configure the internal git prompt behavior
-    set -g __fish_git_prompt_showdirtystate 1
-    set -g __fish_git_prompt_showstagedstate 1
-    set -g __fish_git_prompt_showuntrackedfiles 1
-    set -g __fish_git_prompt_color_branch magenta
-    set -g __fish_git_prompt_char_stateseparator ' '
+    # Handle transient prompt (Fish 4.1.0+)
+    # When --final-rendering is passed, show simplified prompt for scrollback
+    if contains -- --final-rendering $argv
+        echo -e -n (_pure_prompt_transient $exit_code)
+        echo -e -n (_pure_prompt_ending)
+        return
+    end
 
-    echo 
-    set_color blue
-    echo -n (prompt_pwd)
-    set_color normal
+    _pure_print_prompt_rows # manage default vs. compact prompt
+    _pure_place_iterm2_prompt_mark # place iTerm shell integration mark
+    echo -e -n (_pure_prompt $exit_code) # print prompt
+    echo -e -n (_pure_prompt_ending) # reset colors and end prompt
 
-    # Use the high-performance internal git prompt
-    printf '%s ' (fish_vcs_prompt)
-
-    echo
-    test $last_status -ne 0; and set_color red; or set_color normal
-    echo -n "λ "
-    set_color normal
+    set _pure_fresh_session false
 end
