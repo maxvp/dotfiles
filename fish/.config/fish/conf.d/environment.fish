@@ -46,3 +46,9 @@ set -gx __fish_git_prompt_char_untrackedfiles '?'
 set -gx __fish_git_prompt_char_cleanstate ''
 set -gx __fish_git_prompt_char_prefix ''
 set -gx __fish_git_prompt_char_suffix ''
+
+## Pure prompt
+set -gx pure_symbol_git_dirty '*'
+set -gx pure_symbol_git_unpulled_commits '↓'
+set -gx pure_symbol_git_unpushed_commits '↑'
+set -gx pure_show_numbered_git_indicator true
