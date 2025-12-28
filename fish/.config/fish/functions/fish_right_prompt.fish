@@ -1,7 +1,10 @@
 # ~/.dotfiles/fish/.config/fish/functions/fish_right_prompt.fish
 
 function fish_right_prompt
-    set_color 929292
-    date "+%l:%M%p" | string trim # 12-hour format
-    set_color normal
+    if test $CMD_DURATION -gt 100
+        set -l seconds (math -s2 "$CMD_DURATION / 1000")
+        set_color 929292
+        echo -n "$seconds"s
+        set_color normal
+    end
 end
